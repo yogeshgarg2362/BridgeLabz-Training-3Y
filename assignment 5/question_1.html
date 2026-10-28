@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            color: #243047;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #14213d;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        header h1 { font-size: 1.4rem; margin: 0; }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1.2em;
+        }
+
+        nav a:hover { color: #fca311; }
+
+        main {
+            flex: 1;
+            padding: 120px 8% 40px;
+        }
+
+        .intro {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 35px;
+            min-height: 55vh;
+        }
+
+        .intro img {
+            width: 220px;
+            max-width: 40%;
+            border-radius: 50%;
+            border: 5px solid #fca311;
+        }
+
+        .bio { max-width: 550px; }
+        .bio h2 { font-size: 2rem; color: #14213d; }
+        .bio p { font-size: 1.1rem; line-height: 1.7; }
+
+        footer {
+            background: #14213d;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        @media (max-width: 600px) {
+            header { flex-direction: column; gap: 12px; }
+            nav a { margin: 0 8px; }
+            .intro { flex-direction: column; text-align: center; }
+            main { padding-top: 150px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Yogesh</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section class="intro" id="about">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400"
+                 alt="Profile portrait">
+            <div class="bio">
+                <h2>Hello, I'm Yogesh!</h2>
+                <p>
+                    I am a Computer Science Engineering student interested in
+                    web development, programming, and cybersecurity. I enjoy
+                    learning new technologies and building useful projects.
+                </p>
+                <p id="contact">Contact: yogesh@example.com</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Yogesh. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Magazine</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 25px;
+            background: #e9e4d8;
+            color: #29251f;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px;
+            background: #fffdf6;
+            border: 1px solid #c9c0ad;
+            box-shadow: 0 5px 18px #00000010;
+        }
+
+        .masthead {
+            text-align: center;
+            border-bottom: 4px double #29251f;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .masthead h1 {
+            margin: 0;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            letter-spacing: 3px;
+        }
+
+        .story {
+            column-count: 3;
+            column-gap: 30px;
+            column-rule: 1px solid #d4c9b6;
+            text-align: justify;
+            line-height: 1.75;
+        }
+
+        .story h2 {
+            column-span: all;
+            text-align: center;
+            font-size: 1.8rem;
+            margin: 0 0 20px;
+        }
+
+        .story p { margin-top: 0; }
+
+        .story img {
+            float: left;
+            width: 45%;
+            margin: 5px 15px 8px 0;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 800px) {
+            .story { column-count: 2; }
+        }
+
+        @media (max-width: 550px) {
+            body { padding: 10px; }
+            main { padding: 18px; }
+            .story { column-count: 1; }
+            .story img { width: 50%; }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header class="masthead">
+            <h1>THE DAILY MAGAZINE</h1>
+            <p>Ideas • Science • Society • October 2026</p>
+        </header>
+
+        <article class="story">
+            <h2>How Green Cities Can Shape Our Future</h2>
+
+            <p>
+                <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=500"
+                     alt="Modern city buildings">
+                Cities are growing rapidly, bringing new opportunities as well
+                as challenges. Urban planners are exploring ways to make
+                neighborhoods cleaner, healthier, and more comfortable.
+            </p>
+
+            <p>
+                Green spaces are an important part of this transformation.
+                Parks, gardens, and tree-lined streets provide places to relax,
+                support wildlife, and help improve the urban environment.
+            </p>
+
+            <p>
+                Public transport, safe walking paths, and cycling lanes can
+                reduce dependence on private vehicles. These choices may
+                improve air quality while making daily journeys more convenient.
+            </p>
+
+            <p>
+                Modern buildings can also use energy-efficient lighting,
+                better insulation, and renewable energy. Careful design can
+                reduce resource use without sacrificing comfort.
+            </p>
+
+            <p>
+                Residents play a role in building sustainable communities.
+                Recycling, conserving water, and supporting local initiatives
+                can make a meaningful difference when many people participate.
+            </p>
+
+            <p>
+                The cities of tomorrow will need thoughtful planning and
+                cooperation. By balancing development with nature, communities
+                can create places that serve both present and future generations.
+            </p>
+        </article>
+    </main>
+</body>
+</html>

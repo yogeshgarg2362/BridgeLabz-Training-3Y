@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        header {
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        .team {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 20px 5% 50px;
+        }
+
+        .card {
+            flex: 1 1 250px;
+            max-width: 340px;
+            padding: 30px 22px;
+            margin: 5px;
+            background: white;
+            border: 2px solid #dbe3ed;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #00000015;
+            text-align: center;
+        }
+
+        .card h2 { color: #2563eb; }
+        .card p { line-height: 1.7; }
+
+        .leader {
+            background: #e0f2fe;
+            border: 3px solid #0284c7;
+        }
+
+        .role {
+            font-weight: bold;
+            color: #64748b;
+        }
+
+        @media (max-width: 599px) {
+            .team { flex-direction: column; align-items: center; }
+            .card { width: 100%; max-width: 450px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meet Our Team</h1>
+        <p>The people behind our success</p>
+    </header>
+
+    <main class="team">
+        <article class="card leader">
+            <h2>Rahul Sharma</h2>
+            <p class="role">Team Lead</p>
+            <p>
+                Rahul manages the team, plans projects, and helps everyone
+                work together to achieve common goals.
+            </p>
+        </article>
+
+        <article class="card">
+            <h2>Priya Verma</h2>
+            <p class="role">UI Designer</p>
+            <p>
+                Priya designs clean, attractive, and user-friendly interfaces
+                for websites and applications.
+            </p>
+        </article>
+
+        <article class="card">
+            <h2>Aman Singh</h2>
+            <p class="role">Developer</p>
+            <p>
+                Aman builds website features, writes maintainable code,
+                and fixes technical problems.
+            </p>
+        </article>
+    </main>
+</body>
+</html>

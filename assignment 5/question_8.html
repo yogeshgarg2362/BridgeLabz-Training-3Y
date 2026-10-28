@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 65px;
+            padding: 0 25px;
+            display: flex;
+            align-items: center;
+            background: #172554;
+            color: white;
+            z-index: 5;
+        }
+
+        .layout {
+            display: flex;
+            min-height: 100vh;
+            padding-top: 65px;
+        }
+
+        aside {
+            width: 230px;
+            flex-shrink: 0;
+            min-height: calc(100vh - 65px);
+            padding: 25px 15px;
+            background: #1e3a5f;
+        }
+
+        aside a {
+            display: block;
+            padding: 14px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            color: white;
+            text-decoration: none;
+        }
+
+        aside a:hover { background: #315783; }
+
+        main {
+            flex: 1;
+            padding: 30px;
+            min-width: 0;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        .card {
+            flex: 1 1 240px;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px #00000012;
+        }
+
+        .card h2 { color: #2563eb; }
+
+        @media (max-width: 650px) {
+            .layout { flex-direction: column; }
+            aside {
+                width: 100%;
+                min-height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5px;
+                padding: 10px;
+            }
+            aside a { margin: 0; }
+            main { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Admin Dashboard</h2>
+    </header>
+
+    <div class="layout">
+        <aside>
+            <a href="#overview">Overview</a>
+            <a href="#users">Users</a>
+            <a href="#reports">Reports</a>
+            <a href="#settings">Settings</a>
+        </aside>
+
+        <main id="overview">
+            <h1>Dashboard Overview</h1>
+            <p>Welcome to your dashboard. Here is a summary of your activity.</p>
+
+            <section class="cards">
+                <article class="card" id="users">
+                    <h2>Total Users</h2>
+                    <p>1,250 registered users</p>
+                </article>
+
+                <article class="card" id="reports">
+                    <h2>Reports</h2>
+                    <p>48 reports generated this month</p>
+                </article>
+
+                <article class="card" id="settings">
+                    <h2>Performance</h2>
+                    <p>System performance is running smoothly.</p>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
