@@ -1,0 +1,206 @@
+`"use strict";
+
+console.log("Q1. Callback Function");
+
+function showEndMessage() {
+    console.log("Welcome to the course!");
+}
+
+function greetUser(name, callback) {
+    console.log(`Hello ${name}`);
+    callback();
+}
+
+greetUser("Priyanshu", showEndMessage);
+
+
+console.log("\nQ2. Apply Operation");
+
+function applyOperation(numbers, operation) {
+    return numbers.map(operation);
+}
+
+let numbers = [1, 2, 3, 4];
+
+let doubledNumbers = applyOperation(numbers, num => num * 2);
+let squaredNumbers = applyOperation(numbers, num => num * num);
+
+console.log("Doubled Numbers:", doubledNumbers);
+console.log("Squared Numbers:", squaredNumbers);
+
+
+console.log("\nQ3. Arrow Function and this");
+
+let user = {
+    name: "Priyanshu",
+    showName: () => {
+        console.log(this.name);
+    }
+};
+
+user.showName();
+
+user.showName = function () {
+    console.log(this.name);
+};
+
+user.showName();
+
+
+console.log("\nQ4. Constructor Function and Prototype");
+
+function Car(brand, model) {
+    this.brand = brand;
+    this.model = model;
+}
+
+Car.prototype.getDetails = function () {
+    console.log(`Brand: ${this.brand}, Model: ${this.model}`);
+};
+
+let car1 = new Car("Toyota", "Fortuner");
+let car2 = new Car("Mahindra", "Thar");
+
+car1.getDetails();
+car2.getDetails();
+
+console.log(car1.getDetails === car2.getDetails);
+
+
+console.log("\nQ5. Person and Student Inheritance");
+
+function Person(name) {
+    this.name = name;
+}
+
+Person.prototype.showName = function () {
+    console.log(`Name: ${this.name}`);
+};
+
+function Student(name, branch) {
+    Person.call(this, name);
+    this.branch = branch;
+}
+
+Student.prototype = Object.create(Person.prototype);
+Student.prototype.constructor = Student;
+
+Student.prototype.showBranch = function () {
+    console.log(`Branch: ${this.branch}`);
+};
+
+let student1 = new Student("Priyanshu", "CSE");
+
+student1.showName();
+student1.showBranch();
+
+console.log(student1 instanceof Student);
+console.log(student1 instanceof Person);
+
+
+console.log("\nQ6. Person Faculty Professor Prototype Chain");
+
+function PersonInfo(name) {
+    this.name = name;
+}
+
+PersonInfo.prototype.showPerson = function () {
+    console.log(`Person Name: ${this.name}`);
+};
+
+function Faculty(name, subject) {
+    PersonInfo.call(this, name);
+    this.subject = subject;
+}
+
+Faculty.prototype = Object.create(PersonInfo.prototype);
+Faculty.prototype.constructor = Faculty;
+
+Faculty.prototype.showFaculty = function () {
+    console.log(`Subject: ${this.subject}`);
+};
+
+function Professor(name, subject, designation) {
+    Faculty.call(this, name, subject);
+    this.designation = designation;
+}
+
+Professor.prototype = Object.create(Faculty.prototype);
+Professor.prototype.constructor = Professor;
+
+Professor.prototype.showProfessor = function () {
+    console.log(`Designation: ${this.designation}`);
+};
+
+let professor1 = new Professor("Dr. Sharma", "JavaScript", "Senior Professor");
+
+professor1.showPerson();
+professor1.showFaculty();
+professor1.showProfessor();
+
+console.log(professor1 instanceof Professor);
+console.log(professor1 instanceof Faculty);
+console.log(professor1 instanceof PersonInfo);
+
+
+console.log("\nQ7. Closure and Multiplier");
+
+function makeMultiplier(multiplier) {
+    return function (number) {
+        return number * multiplier;
+    };
+}
+
+const triple = makeMultiplier(3);
+
+console.log(triple(5));
+
+
+console.log("\nQ8. Custom myMap Method");
+
+Array.prototype.myMap = function (callback) {
+    let result = [];
+
+    for (let i = 0; i < this.length; i++) {
+        if (i in this) {
+            result[i] = callback(this[i], i, this);
+        }
+    }
+
+    return result;
+};
+
+console.log([1, 2, 3].myMap(num => num * 2));
+console.log([1, 2, 3, 4].myMap(num => num * num));
+
+
+console.log("\nQ9. ES6 Class Inheritance");
+
+class PersonClass {
+    constructor(name) {
+        this.name = name;
+    }
+
+    showName() {
+        console.log(`Name: ${this.name}`);
+    }
+}
+
+class StudentClass extends PersonClass {
+    constructor(name, branch) {
+        super(name);
+        this.branch = branch;
+    }
+
+    showBranch() {
+        console.log(`Branch: ${this.branch}`);
+    }
+}
+
+let student2 = new StudentClass("Priyanshu", "CSE");
+
+student2.showName();
+student2.showBranch();
+
+console.log(student2 instanceof StudentClass);
+console.log(student2 instanceof PersonClass);
