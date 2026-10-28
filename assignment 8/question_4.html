@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors Practice</title>
+  <style>
+    /* Element selector: applies to all paragraphs */
+    p { line-height: 1.7; color: #444; }
+
+    /* Class selector: applies to elements with this class */
+    .highlight {
+      background: #fff3cd;
+      padding: 10px;
+      border-left: 4px solid #e0a800;
+    }
+
+    /* ID selector: targets the unique element */
+    #main-title { color: #155e9a; text-align: center; }
+
+    /* Attribute selector: targets links with an href attribute */
+    a[href] { color: #0759b5; }
+
+    /* Child combinator: selects direct li children of .menu */
+    .menu > li { margin-bottom: 8px; }
+
+    /* Descendant combinator: selects paragraphs inside .content */
+    .content p { background: #eef5ff; padding: 8px; }
+
+    /* Adjacent sibling: selects the first paragraph after h2 */
+    h2 + p { border-top: 2px solid #1769aa; padding-top: 10px; }
+
+    /* General sibling: selects all paragraphs after h3 */
+    h3 ~ p { color: #6f42c1; }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 25px;
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 20px;
+      background: #e1eaf5;
+      border-radius: 8px;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 25px auto;
+      padding: 25px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px #00000012;
+    }
+
+    section { margin-bottom: 28px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="main-title">CSS Selectors Practice</h1>
+    <p>Learn how different CSS selectors target HTML elements.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. Element Selector</h2>
+      <p>This paragraph is styled using the p element selector.</p>
+      <p>Every paragraph receives the same base text styling.</p>
+    </section>
+
+    <section>
+      <h2>2. Class Selector</h2>
+      <p class="highlight">This paragraph uses the highlight class.</p>
+    </section>
+
+    <section>
+      <h2>3. ID Selector</h2>
+      <p>The main heading uses the unique ID main-title.</p>
+    </section>
+
+    <section>
+      <h2>4. Attribute Selector</h2>
+      <p><a href="https://example.com">This link has an href attribute.</a></p>
+    </section>
+
+    <section>
+      <h2>5. Child Combinator ( &gt; )</h2>
+      <ul class="menu">
+        <li>Direct child one</li>
+        <li>Direct child two</li>
+        <li>Direct child three</li>
+      </ul>
+    </section>
+
+    <section class="content">
+      <h2>6. Descendant Combinator (space)</h2>
+      <div>
+        <p>This paragraph is inside the content section.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>7. Adjacent Sibling ( + )</h2>
+      <p>This paragraph comes immediately after the heading.</p>
+      <p>This second paragraph is not the adjacent sibling.</p>
+    </section>
+
+    <section>
+      <h3>8. General Sibling ( ~ )</h3>
+      <p>This paragraph follows the h3 heading.</p>
+      <p>This paragraph is also selected by the general sibling selector.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CSS Selectors Practice</p>
+  </footer>
+</body>
+</html>

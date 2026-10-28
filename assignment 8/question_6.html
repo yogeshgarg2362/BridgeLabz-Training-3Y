@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animation Demonstration</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 25px;
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header { text-align: center; }
+
+    .animation-stage {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 55px;
+      width: 100%;
+      max-width: 900px;
+      min-height: 280px;
+      padding: 35px;
+      margin: 25px 0;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px #00000012;
+    }
+
+    .moving-box {
+      width: 70px;
+      height: 70px;
+      background: #1769aa;
+      border-radius: 10px;
+      animation: moveBox 2s ease-in-out infinite alternate;
+    }
+
+    .bouncing-ball {
+      width: 55px;
+      height: 55px;
+      background: #e63946;
+      border-radius: 50%;
+      animation: bounce 1s ease-in-out infinite;
+    }
+
+    .color-text {
+      font-size: 24px;
+      font-weight: bold;
+      animation: colorChange 3s ease-in-out infinite alternate;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes moveBox {
+      from { transform: translateX(-20px) rotate(0deg); }
+      to { transform: translateX(20px) rotate(180deg); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-65px); }
+    }
+
+    @keyframes colorChange {
+      from { color: #1769aa; }
+      to { color: #e63946; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .moving-box, .bouncing-ball, .color-text {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CSS Animation Demonstration</h1>
+    <p>Examples of keyframes, delays, direction, and iteration count.</p>
+  </header>
+
+  <main>
+    <section class="animation-stage">
+      <div>
+        <h2>Moving Box</h2>
+        <div class="moving-box" aria-label="Moving animated box"></div>
+        <p>Alternate direction</p>
+      </div>
+
+      <div>
+        <h2>Bouncing Ball</h2>
+        <div class="bouncing-ball" aria-label="Bouncing animated ball"></div>
+        <p>Infinite iterations</p>
+      </div>
+
+      <div>
+        <h2>Color Changing</h2>
+        <p class="color-text">CSS Animation</p>
+        <p>Delayed color change</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

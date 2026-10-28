@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combined CSS Effects</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 25px;
+      font-family: Arial, sans-serif;
+      background: #f3f6fb;
+      color: #263238;
+    }
+
+    header, footer { text-align: center; }
+
+    .effects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: stretch;
+      gap: 25px;
+      max-width: 1100px;
+      margin: 40px auto;
+    }
+
+    .effect-card {
+      flex: 1 1 220px;
+      padding: 25px;
+      background: white;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px #00000012;
+      transition: transform 0.3s ease,
+                  box-shadow 0.3s ease,
+                  background-color 0.3s ease;
+    }
+
+    .effect-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px #00000020;
+      background-color: #f0f7ff;
+    }
+
+    .effect-button {
+      border: none;
+      padding: 12px 20px;
+      border-radius: 7px;
+      background: #1769aa;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.25s ease,
+                  background-color 0.25s ease,
+                  box-shadow 0.25s ease;
+    }
+
+    .effect-button:hover {
+      transform: scale(1.08);
+      background: #e63946;
+      box-shadow: 0 5px 12px #e6394640;
+    }
+
+    .effect-button:active {
+      transform: scale(0.96);
+    }
+
+    .effect-button:focus-visible {
+      outline: 3px solid #f59e0b;
+      outline-offset: 4px;
+    }
+
+    .effect-link {
+      display: inline-block;
+      color: #0759b5;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+
+    .effect-link:hover {
+      color: #dc3545;
+      transform: translateX(5px);
+    }
+
+    .effect-list {
+      padding: 0;
+      list-style: none;
+    }
+
+    .effect-list li {
+      padding: 10px;
+      margin: 7px 0;
+      background: #e9f2ff;
+      border-radius: 5px;
+      transition: background-color 0.25s, padding 0.25s;
+    }
+
+    .effect-list li:hover {
+      background: #cce5ff;
+      padding-left: 18px;
+    }
+
+    footer {
+      padding: 20px;
+      background: #243b55;
+      color: white;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .effect-card { flex-basis: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Combined CSS Effects</h1>
+    <p>Explore pseudo-classes, transitions, and transformations.</p>
+  </header>
+
+  <main>
+    <section class="effects-container">
+      <article class="effect-card">
+        <h2>Interactive Button</h2>
+        <p>Hover to grow and change color.</p>
+        <button class="effect-button" type="button">Hover Me</button>
+      </article>
+
+      <article class="effect-card">
+        <h2>Animated Link</h2>
+        <p>The link changes color and moves slightly.</p>
+        <a class="effect-link" href="#link-example">Explore More →</a>
+      </article>
+
+      <article class="effect-card">
+        <h2>Interactive List</h2>
+        <p>Move your pointer over each item.</p>
+        <ul class="effect-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Responsive Design</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>CSS Assignment 8 &copy; 2026</p>
+  </footer>
+</body>
+</html>

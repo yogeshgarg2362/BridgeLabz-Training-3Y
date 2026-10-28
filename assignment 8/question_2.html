@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Tooltip Demonstration</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #dbeafe, #f5e9ff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+    }
+
+    header { text-align: center; }
+
+    .tooltip-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 45px;
+      margin: 50px 0;
+    }
+
+    .tooltip-item {
+      position: relative;
+      background: white;
+      padding: 18px 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px #00000015;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .tooltip-text {
+      position: absolute;
+      bottom: calc(100% + 12px);
+      left: 50%;
+      transform: translateX(-50%) translateY(5px);
+      background: #222;
+      color: white;
+      padding: 9px 12px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: normal;
+      white-space: normal;
+      width: max-content;
+      max-width: 200px;
+      text-align: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-in-out,
+                  transform 0.3s ease-in-out,
+                  visibility 0.3s ease-in-out;
+      z-index: 2;
+    }
+
+    .tooltip-text::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-top-color: #222;
+    }
+
+    .tooltip-item:hover .tooltip-text,
+    .tooltip-item:focus .tooltip-text {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .tooltip-item:focus {
+      outline: 3px solid #2563eb;
+    }
+
+    footer { text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CSS Tooltip Examples</h1>
+    <p>Hover over or focus each item to see its tooltip.</p>
+  </header>
+
+  <main class="tooltip-container">
+    <div class="tooltip-item" tabindex="0">
+      HTML
+      <span class="tooltip-text">HTML structures web pages.</span>
+    </div>
+
+    <div class="tooltip-item" tabindex="0">
+      CSS
+      <span class="tooltip-text">CSS styles and designs web pages.</span>
+    </div>
+
+    <div class="tooltip-item" tabindex="0">
+      Flexbox
+      <span class="tooltip-text">Flexbox aligns items along a flexible axis.</span>
+    </div>
+
+    <div class="tooltip-item" tabindex="0">
+      Grid
+      <span class="tooltip-text">CSS Grid creates two-dimensional layouts.</span>
+    </div>
+  </main>
+
+  <footer>
+    <p>Created using HTML and CSS only.</p>
+  </footer>
+</body>
+</html>

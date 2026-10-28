@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box-Sizing Comparison</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 25px;
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      color: #222;
+    }
+
+    header { text-align: center; }
+
+    .comparison {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 35px;
+      max-width: 900px;
+      margin: 35px auto;
+    }
+
+    .comparison-item {
+      flex: 1 1 280px;
+      min-width: 0;
+      text-align: center;
+    }
+
+    /* Content-box: width excludes padding and borders */
+    .content-box {
+      box-sizing: content-box;
+      width: 250px;
+      max-width: 100%;
+      padding: 25px;
+      border: 8px solid #155e9a;
+      margin: 0 auto;
+      background: #cce5ff;
+      overflow-wrap: anywhere;
+    }
+
+    /* Border-box: width includes padding and borders */
+    .border-box {
+      box-sizing: border-box;
+      width: 250px;
+      max-width: 100%;
+      padding: 25px;
+      border: 8px solid #217a45;
+      margin: 0 auto;
+      background: #d4edda;
+      overflow-wrap: anywhere;
+    }
+
+    .note {
+      max-width: 750px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Box-Sizing Comparison</h1>
+    <p>Compare content-box and border-box.</p>
+  </header>
+
+  <main>
+    <section class="comparison">
+      <article class="comparison-item">
+        <h2>content-box</h2>
+        <div class="content-box">
+          Width: 250px<br>
+          Padding: 25px<br>
+          Border: 8px
+        </div>
+        <p>Actual total width: 250 + 50 + 16 = 316px.</p>
+      </article>
+
+      <article class="comparison-item">
+        <h2>border-box</h2>
+        <div class="border-box">
+          Width: 250px<br>
+          Padding: 25px<br>
+          Border: 8px
+        </div>
+        <p>Actual total width: 250px, including padding and borders.</p>
+      </article>
+    </section>
+
+    <section class="note">
+      <h2>Explanation</h2>
+      <p>
+        With <strong>content-box</strong>, the declared width applies only
+        to the content. Padding and borders are added outside that width.
+      </p>
+      <p>
+        With <strong>border-box</strong>, the declared width includes the
+        content, padding, and borders. This makes layout sizing easier.
+      </p>
+    </section>
+  </main>
+</body>
+</html>

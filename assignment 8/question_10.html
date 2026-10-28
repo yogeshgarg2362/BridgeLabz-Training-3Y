@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini User Interface</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #e0f2fe, #f3e8ff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .site-header, .site-footer {
+      width: 100%;
+      max-width: 900px;
+      padding: 20px;
+      text-align: center;
+      background: #243b55;
+      color: white;
+      border-radius: 10px;
+    }
+
+    .main-card {
+      width: 100%;
+      max-width: 650px;
+      margin: 25px 0;
+      padding: 25px;
+      background: white;
+      border: 1px solid #e1e5eb;
+      border-radius: 14px;
+      box-shadow: 0 8px 25px #00000015;
+    }
+
+    .card-image {
+      display: block;
+      width: 100%;
+      max-height: 220px;
+      object-fit: cover;
+      border-radius: 9px;
+      margin-bottom: 20px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-form label {
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font: inherit;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #1769aa;
+      box-shadow: 0 0 0 3px #1769aa30;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      flex: 1 1 140px;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 6px;
+      background: #1769aa;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background: #104c7d;
+      transform: translateY(-2px);
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn:focus-visible {
+      outline: 3px solid #f59e0b;
+      outline-offset: 3px;
+    }
+
+    .btn-secondary {
+      background: #6c757d;
+    }
+
+    .btn-secondary:hover {
+      background: #495057;
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 12px; }
+      .main-card { padding: 18px; }
+      .button-row { flex-direction: column; }
+      .btn { flex-basis: auto; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>My Mini UI</h1>
+    <p>A responsive user interface built with HTML and CSS.</p>
+  </header>
+
+  <main class="main-card">
+    <section>
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900"
+        alt="Laptop on a web developer's desk"
+      >
+
+      <h2>Contact Our Team</h2>
+      <p>Complete the form below to share your message with us.</p>
+    </section>
+
+    <section>
+      <form class="contact-form" action="#" method="get">
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" placeholder="Enter your name" required>
+
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="email" placeholder="Enter your email" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+
+        <div class="button-row">
+          <button class="btn" type="submit">Submit</button>
+          <button class="btn btn-secondary" type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="mb-0">CSS Assignment 8 &copy; 2026</p>
+    <p class="mb-0">Designed with responsive HTML and CSS.</p>
+  </footer>
+</body>
+</html>
