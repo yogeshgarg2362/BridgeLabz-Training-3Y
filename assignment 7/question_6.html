@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transformations</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #233044;
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+        }
+
+        .showcase {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 44px;
+        }
+
+        figure {
+            margin: 0;
+            text-align: center;
+            width: 150px;
+        }
+
+        .shape {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 22px;
+            display: grid;
+            place-items: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 14px;
+            box-shadow: 0 8px 18px #182b4522;
+            transition: all 0.4s ease;
+        }
+
+        .rotate {
+            background: #4361ee;
+        }
+
+        .scale {
+            background: #2a9d8f;
+        }
+
+        .translate {
+            background: #f4a261;
+        }
+
+        .skew {
+            background: #9b5de5;
+        }
+
+        .rotate:hover {
+            transform: rotate(25deg);
+        }
+
+        .scale:hover {
+            transform: scale(1.15);
+        }
+
+        .translate:hover {
+            transform: translate(12px, -12px);
+        }
+
+        .skew:hover {
+            transform: skew(-12deg, 5deg);
+        }
+
+        figcaption {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CSS Transformations Showcase</h1>
+    <p>Hover over each box to see the transformation.</p>
+</header>
+
+<main>
+    <section class="showcase">
+        <figure>
+            <div class="shape rotate">Rotate</div>
+            <figcaption>rotate(25deg)</figcaption>
+        </figure>
+
+        <figure>
+            <div class="shape scale">Scale</div>
+            <figcaption>scale(1.15)</figcaption>
+        </figure>
+
+        <figure>
+            <div class="shape translate">Move</div>
+            <figcaption>translate(12px, -12px)</figcaption>
+        </figure>
+
+        <figure>
+            <div class="shape skew">Skew</div>
+            <figcaption>skew(-12deg, 5deg)</figcaption>
+        </figure>
+    </section>
+</main>
+
+<footer>
+    <p>Each box uses transition: all 0.4s ease;</p>
+</footer>
+
+</body>
+</html>

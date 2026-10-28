@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography and Text Styling</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 24px;
+            background: #eef3f8;
+            color: #28364a;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        main {
+            max-width: 780px;
+            margin: auto;
+            padding: clamp(20px, 5vw, 44px);
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 8px 24px #23304418;
+        }
+
+        h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            letter-spacing: 1.5px;
+        }
+
+        h2 {
+            font-family: "Trebuchet MS", sans-serif;
+            font-weight: 700;
+            color: #1d6f78;
+        }
+
+        article {
+            font-family: Georgia, serif;
+            font-size: 1.08rem;
+            line-height: 1.85;
+            text-align: justify;
+        }
+
+        article p {
+            margin-bottom: 18px;
+        }
+
+        /* Emphasize the first letter. */
+        article p:first-of-type::first-letter {
+            float: left;
+            font-size: 3.2rem;
+            line-height: 0.9;
+            padding-right: 8px;
+            color: #c05265;
+            font-weight: bold;
+        }
+
+        /* Add letter spacing to the first line. */
+        article p:first-of-type::first-line {
+            letter-spacing: 0.5px;
+        }
+
+        mark {
+            background: #fff0a8;
+            color: #593f00;
+            padding: 2px 4px;
+        }
+
+        strong {
+            color: #a52b46;
+        }
+
+        em {
+            color: #176b87;
+        }
+
+        .caption {
+            font-family: Arial, sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-align: center;
+            color: #607086;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 24px;
+            color: #607086;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>The Art of Typography</h1>
+    <p class="caption">FONT FAMILIES · SPACING · EMPHASIS</p>
+</header>
+
+<main>
+    <article>
+        <h2>Why Readable Text Matters</h2>
+
+        <p>
+            Good typography makes information easier to understand.
+            A thoughtful choice of font, size, and line spacing can
+            make a page feel welcoming while helping readers
+            follow each idea.
+        </p>
+
+        <p>
+            Use <strong>bold text</strong> to draw attention to
+            important details, <em>italic text</em> to add emphasis,
+            and <mark>highlighted text</mark> when a key phrase
+            should stand out.
+        </p>
+
+        <p>
+            Sans-serif fonts often work well for interfaces, while
+            serif fonts can give articles a traditional editorial
+            feel. Comfortable line-height and restrained
+            letter-spacing help keep paragraphs clear.
+        </p>
+    </article>
+</main>
+
+<footer>
+    <p>Typography supports readability and meaning.</p>
+</footer>
+
+</body>
+</html>

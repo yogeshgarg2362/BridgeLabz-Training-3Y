@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #26364b;
+        }
+
+        header {
+            padding: 22px;
+            text-align: center;
+            background: #172b4d;
+            color: white;
+        }
+
+        nav {
+            background: #243e66;
+            padding: 12px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border: 1px solid #ffffff50;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #e7efff;
+            color: #172b4d;
+            transform: translateY(-2px);
+        }
+
+        nav a:focus-visible {
+            outline: 3px solid #ffc857;
+            outline-offset: 3px;
+        }
+
+        /* Highlight the active link. */
+        nav a.active {
+            background: #ffc857;
+            color: #172b4d;
+            border-color: #ffc857;
+            font-weight: bold;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .content {
+            max-width: 650px;
+            padding: 30px;
+            text-align: center;
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 8px 24px #172b4d18;
+        }
+
+        footer {
+            text-align: center;
+            padding: 18px;
+            background: #e4eaf3;
+        }
+
+        /* Stack navigation links below 700px. */
+        @media (max-width: 700px) {
+            .nav-links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            nav a {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Sample Website</h1>
+    <p>A simple responsive navigation layout</p>
+</header>
+
+<nav aria-label="Main navigation">
+    <div class="nav-links">
+        <a class="active" href="#home" aria-current="page">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<main id="home">
+    <section class="content">
+        <h2>Welcome!</h2>
+        <p>
+            This page demonstrates a five-link horizontal navigation
+            bar with smooth hover transitions and a highlighted active link.
+        </p>
+        <p>
+            When the screen width is below 700px, the links stack
+            vertically for easier navigation on phones.
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 My Sample Website</p>
+</footer>
+
+</body>
+</html>

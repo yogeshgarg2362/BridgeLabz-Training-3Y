@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and Depth</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f5f9;
+            color: #233044;
+        }
+
+        header {
+            padding: 28px 16px;
+            text-align: center;
+        }
+
+        header h1 {
+            text-shadow: 2px 3px 4px #8a9bb4;
+        }
+
+        main {
+            padding: 10px 24px 40px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .card {
+            flex: 1 1 230px;
+            max-width: 300px;
+            padding: 24px;
+            border-radius: 14px;
+            background: white;
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .soft {
+            box-shadow: 0 4px 12px #1c355022;
+        }
+
+        .layered {
+            box-shadow: 0 8px 18px #1c355033,
+                        0 2px 5px #1c35501c;
+        }
+
+        .colored {
+            box-shadow: 0 8px 24px #6c63ff40;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 18px 32px #1c355033;
+        }
+
+        .card h2 {
+            text-shadow: 1px 2px 2px #b8c3d3;
+        }
+
+        .avatar {
+            width: 64px;
+            height: 64px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: #dce8ff;
+            font-size: 1.8rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 18px;
+            background: #e3eaf3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Cards with Shadows and Depth</h1>
+    <p>Move your pointer over a card to lift it.</p>
+</header>
+
+<main>
+    <section class="cards">
+        <article class="card soft">
+            <div class="avatar">🌱</div>
+            <h2>Alex Green</h2>
+            <p>Soft Shadow</p>
+            <p>A gentle shadow creates a clean appearance.</p>
+        </article>
+
+        <article class="card layered">
+            <div class="avatar">🎨</div>
+            <h2>Sam Artist</h2>
+            <p>Layered Shadow</p>
+            <p>Multiple shadows create a stronger sense of depth.</p>
+        </article>
+
+        <article class="card colored">
+            <div class="avatar">💻</div>
+            <h2>Jordan Dev</h2>
+            <p>Colored Shadow</p>
+            <p>A tinted shadow adds color and personality.</p>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <p>Box-shadow, text-shadow, and CSS transitions</p>
+</footer>
+
+</body>
+</html>

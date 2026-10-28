@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height and Width Practice</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #183044;
+            color: white;
+        }
+
+        main {
+            min-height: 75vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+        }
+
+        .box-row {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 5px 14px #17324d20;
+            overflow: auto;
+        }
+
+        .small {
+            width: 180px;
+            height: 140px;
+            background: #cce7ff;
+        }
+
+        .medium {
+            width: 35%;
+            min-width: 220px;
+            max-width: 320px;
+            min-height: 190px;
+            background: #c9f2df;
+        }
+
+        .large {
+            width: 18em;
+            height: 35vh;
+            min-height: 180px;
+            max-height: 280px;
+            background: #ffe0b8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 16px;
+        }
+
+        @media (max-width: 600px) {
+            .medium {
+                width: 100%;
+            }
+
+            .large {
+                width: min(100%, 18em);
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Height and Width Practice</h1>
+    <p>Examples of px, %, vh, and em units</p>
+</header>
+
+<main>
+    <section class="box-row">
+        <article class="box small">
+            <h2>Small Box</h2>
+            <p>180px × 140px</p>
+        </article>
+
+        <article class="box medium">
+            <h2>Medium Box</h2>
+            <p>35% width</p>
+            <p>Minimum height: 190px</p>
+        </article>
+
+        <article class="box large">
+            <h2>Large Box</h2>
+            <p>18em wide</p>
+            <p>35vh high</p>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <p>Using min-height, max-width, and overflow</p>
+</footer>
+
+</body>
+</html>

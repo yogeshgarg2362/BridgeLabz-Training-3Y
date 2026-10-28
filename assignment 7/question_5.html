@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Selectors</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 24px;
+            font-family: Arial, sans-serif;
+            background: #f6f8fc;
+            color: #253247;
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 16px;
+            background: #203a5f;
+            color: white;
+            border-radius: 10px;
+        }
+
+        main {
+            max-width: 850px;
+            margin: 24px auto;
+        }
+
+        /* Element selector */
+        p {
+            line-height: 1.6;
+        }
+
+        /* Class selector */
+        .note {
+            background: #fff3cd;
+            padding: 10px;
+            border-left: 4px solid #d39e00;
+        }
+
+        /* ID selector */
+        #selector-list {
+            padding: 18px 18px 18px 38px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        /* Attribute selectors */
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #8b9bb1;
+            border-radius: 6px;
+        }
+
+        a[href^="https"] {
+            color: #1769aa;
+            font-weight: bold;
+        }
+
+        /* Child combinator */
+        #selector-list > li {
+            padding: 8px;
+        }
+
+        /* Adjacent sibling combinator */
+        h2 + p {
+            color: #375a7f;
+        }
+
+        /* General sibling combinator */
+        h2 ~ p {
+            border-bottom: 1px dashed #c7d0dd;
+            padding-bottom: 8px;
+        }
+
+        /* Descendant selector */
+        .resources a {
+            display: inline-block;
+            margin: 6px;
+        }
+
+        /* Pseudo-classes */
+        #selector-list li:nth-child(odd) {
+            background: #eef4fb;
+        }
+
+        #selector-list li:hover {
+            background: #d8eaff;
+        }
+
+        input:focus {
+            outline: 3px solid #8bc6ff;
+            outline-offset: 2px;
+        }
+
+        /* Pseudo-elements */
+        h2::before {
+            content: "★ ";
+            color: #e0a800;
+        }
+
+        h2::after {
+            content: " ✓";
+            color: #198754;
+            font-size: 0.8em;
+        }
+
+        .resources {
+            padding: 16px;
+            background: #eaf7f0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Advanced CSS Selectors</h1>
+</header>
+
+<main>
+    <section>
+        <h2>Selector Practice List</h2>
+
+        <p>
+            This paragraph follows the heading and demonstrates
+            the adjacent sibling selector.
+        </p>
+
+        <p class="note">
+            This is a class-based note. The general sibling selector
+            also applies to paragraphs following the heading.
+        </p>
+
+        <ul id="selector-list">
+            <li>Element selector</li>
+            <li>Class and ID selectors</li>
+            <li>Attribute selectors</li>
+            <li>Pseudo-classes and pseudo-elements</li>
+        </ul>
+    </section>
+
+    <section class="resources">
+        <h2>Resources</h2>
+
+        <p>Links beginning with HTTPS use an attribute selector.</p>
+
+        <a href="https://developer.mozilla.org/">MDN Web Docs</a>
+        <a href="https://www.w3.org/">W3C</a>
+
+        <p>
+            <label for="sample">Text input: </label>
+            <input id="sample" type="text" placeholder="Type something">
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>CSS selectors target elements without JavaScript.</p>
+</footer>
+
+</body>
+</html>
