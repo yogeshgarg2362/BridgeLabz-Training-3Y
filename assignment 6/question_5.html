@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 20px;
+            font-family: Arial, sans-serif;
+            background: #f3f6fb;
+            color: #263247;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .pricing {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .card {
+            flex: 1 1 240px;
+            max-width: 300px;
+            padding: 30px 24px;
+            text-align: center;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px #00000012;
+            animation: fadeIn 0.8s ease both;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 14px 28px #00000020;
+        }
+
+        .featured {
+            background: #173f73;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+            line-height: 2.2;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #2475d0;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .featured .button {
+            background: #ffc857;
+            color: #17324d;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 750px) {
+            .pricing {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+
+            .featured {
+                transform: none;
+            }
+
+            .featured:hover {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Choose Your Plan</h1>
+
+<main class="pricing">
+    <section class="card">
+        <h2>Basic</h2>
+        <p class="price">₹199</p>
+        <p>per month</p>
+        <ul>
+            <li>5 Projects</li>
+            <li>Basic Support</li>
+            <li>10 GB Storage</li>
+        </ul>
+        <a href="#basic" class="button">Choose Plan</a>
+    </section>
+
+    <section class="card featured">
+        <h2>Professional</h2>
+        <p class="price">₹499</p>
+        <p>per month</p>
+        <ul>
+            <li>20 Projects</li>
+            <li>Priority Support</li>
+            <li>100 GB Storage</li>
+        </ul>
+        <a href="#professional" class="button">Choose Plan</a>
+    </section>
+
+    <section class="card">
+        <h2>Premium</h2>
+        <p class="price">₹999</p>
+        <p>per month</p>
+        <ul>
+            <li>Unlimited Projects</li>
+            <li>24/7 Support</li>
+            <li>1 TB Storage</li>
+        </ul>
+        <a href="#premium" class="button">Choose Plan</a>
+    </section>
+</main>
+
+</body>
+</html>

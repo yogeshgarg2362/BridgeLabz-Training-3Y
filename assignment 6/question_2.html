@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 25px;
+            font-family: Arial, sans-serif;
+            background: #f3f6fa;
+        }
+
+        h1 {
+            text-align: center;
+            color: #183044;
+            margin-bottom: 30px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 22px;
+            text-align: center;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px #00000012;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .icon {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .card h2 {
+            font-size: 18px;
+            margin: 8px 0;
+        }
+
+        .price {
+            color: #16804a;
+            font-weight: bold;
+        }
+
+        @media (max-width: 900px) {
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+            .products {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Our Products</h1>
+
+<main class="products">
+    <article class="card">
+        <div class="icon">🎧</div>
+        <h2>Wireless Headphones</h2>
+        <p class="price">₹1,499</p>
+    </article>
+
+    <article class="card">
+        <div class="icon">⌚</div>
+        <h2>Smart Watch</h2>
+        <p class="price">₹2,499</p>
+    </article>
+
+    <article class="card">
+        <div class="icon">⌨️</div>
+        <h2>Mechanical Keyboard</h2>
+        <p class="price">₹3,199</p>
+    </article>
+
+    <article class="card">
+        <div class="icon">🖱️</div>
+        <h2>Wireless Mouse</h2>
+        <p class="price">₹799</p>
+    </article>
+
+    <article class="card">
+        <div class="icon">🔊</div>
+        <h2>Bluetooth Speaker</h2>
+        <p class="price">₹1,199</p>
+    </article>
+
+    <article class="card">
+        <div class="icon">📷</div>
+        <h2>Digital Camera</h2>
+        <p class="price">₹8,999</p>
+    </article>
+
+    <article class="card">
+        <div class="icon">🎮</div>
+        <h2>Gaming Controller</h2>
+        <p class="price">₹2,099</p>
+    </article>
+
+    <article class="card">
+        <div class="icon">💻</div>
+        <h2>Laptop Stand</h2>
+        <p class="price">₹999</p>
+    </article>
+</main>
+
+</body>
+</html>

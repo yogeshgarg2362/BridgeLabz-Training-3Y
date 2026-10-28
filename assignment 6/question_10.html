@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox and Grid Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #263247;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px 5%;
+            background: #17324d;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #ffc857;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+            padding: 30px 5%;
+        }
+
+        article, aside {
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px #00000010;
+        }
+
+        /* Animate the article title when the page loads. */
+        article h2 {
+            animation: fadeUp 0.8s ease both;
+        }
+
+        .feature-boxes {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .feature {
+            flex: 1 1 120px;
+            padding: 18px;
+            text-align: center;
+            background: #e2efff;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        aside h2 {
+            color: #1769aa;
+        }
+
+        aside a {
+            display: block;
+            margin: 14px 0;
+            color: #1769aa;
+            text-decoration: none;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #17324d;
+            color: white;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>TechSpace</h1>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#articles">Articles</a>
+        <a href="#resources">Resources</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main id="home">
+    <article id="articles">
+        <h2>Welcome to TechSpace</h2>
+
+        <p>
+            TechSpace shares useful information about technology,
+            programming, web development, and modern digital tools.
+        </p>
+
+        <p>
+            Our goal is to make learning technology simple,
+            practical, and accessible to everyone.
+        </p>
+
+        <section class="feature-boxes">
+            <div class="feature">
+                <h3>Web Design</h3>
+                <p>Learn HTML and CSS.</p>
+            </div>
+
+            <div class="feature">
+                <h3>Programming</h3>
+                <p>Improve coding skills.</p>
+            </div>
+
+            <div class="feature">
+                <h3>Security</h3>
+                <p>Explore cybersecurity.</p>
+            </div>
+        </section>
+    </article>
+
+    <aside id="resources">
+        <h2>Useful Resources</h2>
+        <a href="https://developer.mozilla.org/">MDN Web Docs</a>
+        <a href="https://www.w3.org/">W3C</a>
+        <a href="https://github.com/">GitHub</a>
+        <h3>Latest Update</h3>
+        <p>Keep practicing and building projects to improve your skills.</p>
+    </aside>
+</main>
+
+<footer id="contact">
+    <p>&copy; 2026 TechSpace. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

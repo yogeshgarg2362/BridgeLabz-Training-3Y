@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #263247;
+            background: #f4f7fb;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px 7%;
+            background: #172b4d;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffc857;
+        }
+
+        main {
+            min-height: 75vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 50px 7%;
+        }
+
+        .about {
+            flex: 1;
+        }
+
+        .about h2 {
+            color: #1769aa;
+            font-size: 32px;
+        }
+
+        .about p {
+            line-height: 1.8;
+        }
+
+        .profile {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile img {
+            width: 100%;
+            max-width: 350px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px #0002;
+        }
+
+        footer {
+            text-align: center;
+            padding: 18px;
+            background: #172b4d;
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+            header, main {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            main {
+                gap: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Yogesh</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main id="home">
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>
+            Hello! I am a Computer Science student interested in
+            web development, programming, and cybersecurity.
+            I enjoy learning new technologies and building
+            practical projects.
+        </p>
+        <p>
+            My goal is to develop useful applications and
+            improve my technical skills.
+        </p>
+    </section>
+
+    <section class="profile" id="portfolio">
+        <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+            alt="Computer and workspace"
+        >
+    </section>
+</main>
+
+<footer id="contact">
+    <p>&copy; 2026 Yogesh. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
