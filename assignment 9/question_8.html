@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Choose Your Plan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: #f8f9fa; }
+    .pricing-card {
+      border: 0;
+      border-radius: 15px;
+      transition: transform .3s, box-shadow .3s;
+    }
+    .pricing-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 1rem 2rem #0002 !important;
+    }
+    .featured-plan { background: var(--bs-primary); color: white; }
+    .featured-plan .list-group-item {
+      color: white;
+      background: transparent;
+      border-color: #ffffff40;
+    }
+  </style>
+</head>
+<body>
+  <header class="text-center py-5">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Choose Your Plan</h1>
+      <p class="lead text-secondary">Flexible plans for every stage of growth.</p>
+    </div>
+  </header>
+
+  <main class="container pb-5">
+    <div class="row g-4 align-items-stretch">
+      <div class="col-12 col-md-4">
+        <article class="card pricing-card shadow-sm h-100">
+          <div class="card-body p-4 text-center">
+            <h2 class="h4">Basic</h2>
+            <p class="display-5 fw-bold">₹199<small class="fs-6 text-secondary">/month</small></p>
+            <p class="text-secondary">For individuals getting started.</p>
+            <ul class="list-group list-group-flush text-start mb-4">
+              <li class="list-group-item">5 projects</li>
+              <li class="list-group-item">Basic analytics</li>
+              <li class="list-group-item">Email support</li>
+            </ul>
+            <a href="mailto:hello@example.com" class="btn btn-outline-primary w-100">Choose Basic</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <article class="card pricing-card featured-plan shadow-lg h-100">
+          <div class="card-body p-4 text-center">
+            <span class="badge text-bg-light mb-3">Most Popular</span>
+            <h2 class="h4">Pro</h2>
+            <p class="display-5 fw-bold">₹499<small class="fs-6">/month</small></p>
+            <p>For growing teams and professionals.</p>
+            <ul class="list-group list-group-flush text-start mb-4">
+              <li class="list-group-item">Unlimited projects</li>
+              <li class="list-group-item">Advanced analytics</li>
+              <li class="list-group-item">Priority support</li>
+            </ul>
+            <a href="mailto:hello@example.com" class="btn btn-light w-100">Choose Pro</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <article class="card pricing-card shadow-sm h-100">
+          <div class="card-body p-4 text-center">
+            <h2 class="h4">Enterprise</h2>
+            <p class="display-5 fw-bold">₹999<small class="fs-6 text-secondary">/month</small></p>
+            <p class="text-secondary">For businesses with advanced needs.</p>
+            <ul class="list-group list-group-flush text-start mb-4">
+              <li class="list-group-item">Everything in Pro</li>
+              <li class="list-group-item">Team management</li>
+              <li class="list-group-item">Dedicated support</li>
+            </ul>
+            <a href="mailto:hello@example.com" class="btn btn-outline-primary w-100">Choose Enterprise</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center text-secondary py-3">© 2026 CloudDesk</footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Task Tracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: #f4f6f9; }
+    .task-card { border: 0; border-radius: 12px; }
+    .list-group-item { padding: 1rem; }
+  </style>
+</head>
+<body>
+  <header class="bg-primary text-white py-4">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <h1 class="h3 mb-0">My Task Tracker</h1>
+      <span>Pending <span class="badge text-bg-danger">4</span></span>
+    </div>
+  </header>
+
+  <main class="container py-5">
+    <section class="card task-card shadow-sm">
+      <div class="card-body p-4">
+        <h2 class="h4 mb-4">My Tasks</h2>
+        <ul class="list-group mb-4">
+          <li class="list-group-item d-flex justify-content-between align-items-center gap-2">
+            <span>Complete Bootstrap assignment</span>
+            <span class="badge text-bg-danger">High</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center gap-2">
+            <span>Prepare for DSA practical</span>
+            <span class="badge text-bg-warning">Medium</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center gap-2">
+            <span>Review cybersecurity notes</span>
+            <span class="badge text-bg-success">Low</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center gap-2">
+            <span>Update GitHub repository</span>
+            <span class="badge text-bg-danger">High</span>
+          </li>
+        </ul>
+
+        <button type="button" class="btn btn-success">
+          Completed <span class="badge text-bg-light text-dark ms-1">2</span>
+        </button>
+      </div>
+    </section>
+    <p class="text-secondary small mt-3">The task list and counters are sample data.</p>
+  </main>
+
+  <footer class="text-center text-secondary py-3">© 2026 Task Tracker</footer>
+</body>
+</html>
